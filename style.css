@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.cdnfonts.com/css/quartz-ms');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    display: none;
+    }
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 90deg;
+    inherits: true;
+  }
+  
+  @property --gradX {
+    syntax: '<percentage>';
+    initial-value: 50%;
+    inherits: true;
+  }
+  
+  @property --gradY {
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: true;
+  }
+
+body {
+    background: #223;
+    font-size: 16px;
+}
+
+:root {
+	--d: 2500ms;
+	--angle: 90deg;
+	--gradX: 100%;
+	--gradY: 50%;
+	--c1: rgb(193, 104, 228);
+	--c2: rgba(168, 239, 255, 0.1);
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: rgb(230, 167, 255);
+
+}
+
+header {
+    width: 100%;
+    background-color: #223;
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+ul li {
+    text-align: center;
+}
+
+ul li a {
+    font-weight: 600;
+    font-family: 'Orbitron', sans-serif;
+    color: #BEBEBE; 
+
+}
+
+nav {
+    width: 100%;
+    height: 7vh;
+    background-color: rgb(27, 27, 27);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app-container {
+    width: 100%;
+    height: 82.5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.status-box {
+    width: 70%;
+    height: 80%;
+    border: 1px solid #BEBEBE;
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    padding-top: 1rem;
+    border: 0.35rem solid;
+    border-image: conic-gradient(from var(--angle), var(--c2), var(--c1) 0.1turn, var(--c1) 0.15turn, var(--c2) 0.25turn) 30;
+	animation: borderRotate var(--d) linear infinite forwards;
+}
+
+.container {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.rpm {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    background-color: black;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.rpm-speed {
+    font-family: 'Quartz MS', sans-serif;
+    color: rgb(193, 104, 228);
+    font-size: 6rem;
+    width: auto;
+    height: auto;
+}
+
+.rpm-text {
+    font-family: 'Quartz MS', sans-serif;
+    color: white;
+    font-size: 1.7rem;
+    width: auto;
+    height: auto;
+}
+
+.nano {
+    align-items: baseline;
+    gap: 0.4rem;
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.nano-deg {
+    color: rgb(193, 104, 228);
+}
+
+.esp {
+    align-items: baseline;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.esp-deg {
+    color: rgb(193, 104, 228);
+}
+
+.gear {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.gear-deg {
+    color: rgb(129, 228, 104);
+}
+
+.nikel-text {
+    align-items: baseline;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.nikel-deg {
+    color: rgb(193, 104, 228);
+    font-family: 'Poppins', sans-serif;
+}
+
+.servo-text {
+    align-items: baseline;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    font-family: 'Poppins', sans-serif;
+    color: whitesmoke;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.servo-deg {
+    color: rgb(193, 104, 228);
+    font-family: 'Poppins', sans-serif;
+}
+
+footer {
+    background-color: rgb(27, 27, 27);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    color: #BEBEBE;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+}
+footer p {
+    text-align: center;
+}
+
+a {
+    color: rgb(229, 173, 252);
+    text-decoration: none;
+    font-family: "Orbitron", sans-serif;
+    font-style:inherit;
+}
+
+.rpm {
+    --border-size: 3px;
+    --border-angle: 0turn;
+    background-image: conic-gradient(
+        from var(--border-angle),
+        #213,
+        #112 50%,
+        #213
+      ),
+      conic-gradient(from var(--border-angle), transparent 20%, #08f, #f03);
+    background-size: calc(100% - (var(--border-size) * 2))
+        calc(100% - (var(--border-size) * 2)),
+      cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  
+    animation: bg-spin 3s linear infinite;
+  }
+  
+  @property --border-angle {
+    syntax: "<angle>";
+    inherits: true;
+    initial-value: 0turn;
+  }
+
+  @keyframes bg-spin {
+    to {
+      --border-angle: 1turn;
+    }
+  }
+
+  @keyframes borderRotate {
+	100% {
+		--angle: 420deg;
+	}
+}
+
+@keyframes borderRadial {
+	20% {
+		--gradX: 100%;
+		--gradY: 50%;
+	}
+	40% {
+		--gradX: 100%;
+		--gradY: 100%;
+	}
+	60% {
+		--gradX: 50%;
+		--gradY: 100%;
+	}
+	80% {
+		--gradX: 0%;
+		--gradY: 50%;
+	}
+	100% {
+		--gradX: 50%;
+		--gradY: 0%;
+	}
+}
+
+@media (max-width: 484px) {
+    .rpm-speed {
+        font-size: 5rem;
+    }
+}
+
+@media (max-width: 410px) {
+    .rpm-speed {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 299px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
+@media (max-width: 322px) {
+    .rpm-speed {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 250px) {
+    .rpm-speed {
+        font-size: 2rem;
+    }
+}
